@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    
+
     Route::middleware('admin')->group(function () {
         Route::resource('users', UserController::class);
         Route::resource('roles', RoleController::class);
@@ -36,6 +36,13 @@ Route::middleware('auth')->group(function () {
         Route::get('sales/{sale}/invoice', [SaleController::class, 'invoice'])->name('sales.invoice');
         Route::resource('products', ProductController::class);
         Route::resource('customers', CustomerController::class);
+
+        // Purchasing Admin Page Modules
+        Route::resource('suppliers', \App\Http\Controllers\SupplierController::class);
+        Route::resource('purchase-requests', \App\Http\Controllers\PurchaseRequestController::class);
+        Route::resource('purchase-orders', \App\Http\Controllers\PurchaseOrderController::class);
+        Route::resource('invoices', \App\Http\Controllers\InvoiceController::class);
+        Route::resource('purchase-order-items', \App\Http\Controllers\PurchaseOrderItemController::class);
     });
 
     Route::get('lang/{locale}', function ($locale) {
