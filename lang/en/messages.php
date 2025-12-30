@@ -22,6 +22,7 @@ return [
     'delete' => 'Delete',
     'stock' => 'Stock',
     'lkr' => 'Rs.',
+    'language' => 'Language',
     'success' => 'Success!',
     'created_at' => 'Created At',
     'actions' => 'Actions',

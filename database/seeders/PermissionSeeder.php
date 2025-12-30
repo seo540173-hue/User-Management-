@@ -63,5 +63,29 @@ class PermissionSeeder extends Seeder
         if ($adminRole) {
             $adminRole->syncPermissions(Permission::all());
         }
+
+        // Assign permissions to Manager role
+        $managerRole = Role::where('name', 'Manager')->first();
+        if ($managerRole) {
+            $managerRole->syncPermissions([
+                'view-dashboard',
+                'view-reports',
+                'view-products', 'create-products', 'edit-products',
+                'view-customers', 'create-customers', 'edit-customers',
+                'view-sales', 'create-sales', 'edit-sales', 'view-invoices',
+                'view-users', // Managers can view but not delete
+            ]);
+        }
+
+        // Assign permissions to Staff role
+        $staffRole = Role::where('name', 'Staff')->first();
+        if ($staffRole) {
+            $staffRole->syncPermissions([
+                'view-dashboard',
+                'view-products',
+                'view-customers', 'create-customers',
+                'view-sales', 'create-sales', 'view-invoices',
+            ]);
+        }
     }
 }

@@ -22,6 +22,7 @@ return [
     'delete' => 'මකන්න',
     'stock' => 'තොගය',
     'lkr' => 'රු.',
+    'language' => 'භාෂාව',
     'success' => 'සාර්ථකයි!',
     'created_at' => 'සෑදූ දිනය',
     'actions' => 'ක්‍රියා',

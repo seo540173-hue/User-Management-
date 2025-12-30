@@ -35,6 +35,7 @@ return [
     'completed' => 'முடிந்தது',
     'pending' => 'நிலுவையில்',
     'cancelled' => 'ரத்து செய்யப்பட்டது',
+    'language' => 'மொழி',
     'success' => 'வெற்றி!',
     'created_at' => 'உருவாக்கப்பட்டது',
     'actions' => 'செயல்கள்',

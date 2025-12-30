@@ -7,7 +7,7 @@
                         <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
                         <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
                     </svg>
-                    <span class="ms-3">{{ __('Dashboard') }}</span>
+                    <span class="ms-3">{{ __('messages.dashboard') }}</span>
                 </a>
             </li>
             @can('view-users')
@@ -16,7 +16,7 @@
                     <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                         <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
                     </svg>
-                    <span class="ms-3">{{ __('User') }}</span>
+                    <span class="ms-3">{{ __('messages.users') }}</span>
                 </a>
             </li>
             @endcan
@@ -27,7 +27,7 @@
                         <path d="M5 5a5 5 0 0 1 10 0v2A5 5 0 0 1 5 7V5Zm0 2.968c0 1.15.5 2.193 1.285 2.766A5 5 0 0 1 15 13v.81C15 15.424 13.91 16 12 16H8c-1.927 0-3-.585-3-2.19V13c0-1.895 2.083-2.887 2.083-2.887A4.957 4.957 0 0 1 5 7.968Z"/>
                         <path d="M10 17a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-2a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"/> 
                     </svg>
-                    <span class="ms-3">{{ __('Roles') }}</span>
+                    <span class="ms-3">{{ __('messages.roles') }}</span>
                 </a>
             </li>
             @endcan
@@ -60,7 +60,7 @@
         </ul>
 
         <div class="mt-8 pt-4 border-t border-gray-100">
-            <p class="text-xs text-gray-400 uppercase font-bold mb-2">Language</p>
+            <p class="text-xs text-gray-400 uppercase font-bold mb-2">{{ __('messages.language') }}</p>
             <div class="flex flex-col space-y-1">
                 <a href="{{ route('lang.switch', 'en') }}" class="text-sm px-2 py-1 rounded {{ app()->getLocale() == 'en' ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50' }}">English</a>
                 <a href="{{ route('lang.switch', 'ta') }}" class="text-sm px-2 py-1 rounded {{ app()->getLocale() == 'ta' ? 'bg-blue-50 text-blue-600' : 'text-gray-600 hover:bg-gray-50' }}">Tamil (தமிழ்)</a>
